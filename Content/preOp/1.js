@@ -8,6 +8,7 @@ export const data = {
                 ["CBC", "- Major surgery requiring group & screen or match\n- Malignancy\n- Chronic CV, respiratory, renal, hepatic disease\n- Suspected or known anemia or coagulopathy\n- Patient <1y/o"],
                 ["INR/PTT", "- Anticoagulation therapy\n- Suspected or known coagulopathy\n- Hepatic disease"]
             ]
-        }
+        },
+        { component: "photo", src: 1 }
     ]
 };

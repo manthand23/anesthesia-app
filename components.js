@@ -3,12 +3,14 @@ import Title from "./Components/title";
 import Heading from "./Components/heading";
 import Bullets from "./Components/bullets";
 import Table from "./Components/table"
+import Photo from "./Components/photo";
 
 const Components = {
     title: Title,
     heading: Heading,
     bullets: Bullets,
-    table: Table
+    table: Table,
+    photo: Photo
   };
   
 export default (block) => {
