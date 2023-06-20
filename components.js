@@ -2,11 +2,13 @@ import React from "react";
 import Title from "./Components/title";
 import Heading from "./Components/heading";
 import Bullets from "./Components/bullets";
+import Table from "./Components/table"
 
 const Components = {
     title: Title,
     heading: Heading,
-    bullets: Bullets
+    bullets: Bullets,
+    table: Table
   };
   
 export default (block) => {
