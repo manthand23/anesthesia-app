@@ -5,7 +5,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { ScrollView } from 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from "@react-navigation/stack";
-import PreOpAssessment from '../Content/preOp/PreOpAssessment';
+import { PreOpAssessment, PreOpAssessment2} from '../Content/preOp/PreOpAssessment';
 
 const Stack = createStackNavigator();
 
@@ -31,6 +31,10 @@ const ToC = () => {
                     <Stack.Screen
                         name='PreOpAssessment'
                         component={PreOpAssessment}
+                    />
+                    <Stack.Screen
+                        name='PreOpAssessment2'
+                        component={PreOpAssessment2}
                     />
                 </Stack.Navigator>
             </NavigationContainer>

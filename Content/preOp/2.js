@@ -1,4 +1,4 @@
-export const data1 = {
+export const data2 = {
     body: [
         { component: "title", text: "Goals of Pre-Op Assessment" },
         { component: "heading", text: "Identify and quantify concerns to adapt your anesthetic management:" },
