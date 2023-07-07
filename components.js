@@ -5,6 +5,7 @@ import Bullets from "./Components/bullets";
 import Table from "./Components/table"
 import Photo from "./Components/photo";
 import Quiz from "./Components/quiz";
+import Para from "./Components/para"
 
 const Components = {
     title: Title,
@@ -13,6 +14,7 @@ const Components = {
     table: Table,
     photo: Photo,
     quiz: Quiz,
+    para: Para,
   };
   
 export default (block) => {

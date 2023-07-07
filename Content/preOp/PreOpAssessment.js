@@ -19,8 +19,8 @@ function Table({ navigation }) {
             <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('InvestigationOptimization')}>
                 <Text style={styles.name}>Investigation and Optimization</Text>
             </TouchableOpacity>
-            {<TouchableOpacity onPress={handlePress}>
-                <Text style={styles.button}>Immediate Pre-Op Assessment</Text>
+            {<TouchableOpacity style={styles.button} onPress={() => navigation.navigate('ImmediatePreOp')}>
+                <Text style={styles.name}>Immediate Pre-Op Assessment</Text>
             </TouchableOpacity>
             /*<TouchableOpacity onPress={handlePress}>
                 <Text style={styles.button}>Post-operative nausea/vomiting (PONV)</Text>
