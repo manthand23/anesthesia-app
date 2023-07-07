@@ -1,7 +1,6 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
 import { Image, View, Text, TextInput, StyleSheet } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
 
 const HomeScreen = () => {
   const [input, setInput] = React.useState('');

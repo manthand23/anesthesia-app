@@ -1,6 +1,5 @@
 import 'react-native-gesture-handler';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import {TouchableOpacity, Text, StyleSheet } from 'react-native';
+import {TouchableOpacity, Text, StyleSheet, SafeAreaView } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
 import { NavigationContainer } from '@react-navigation/native';
@@ -36,7 +35,7 @@ function Table({ navigation }) {
 
 const PreOpAssessment = () => {
     return (
-        <SafeAreaView edges={['bottom']} style={{ flex: 1 }}>
+        <SafeAreaView edges={['top', 'bottom', 'left', 'right']} style={{ flex: 1 }}>
             <NavigationContainer independent={true}>
                 <Stack.Navigator screenOptions={{ headerShown: false }}>
                     <Stack.Screen
@@ -62,9 +61,11 @@ const styles = StyleSheet.create({
       borderWidth: 1,
       borderRadius: 10,
       margin: 10,
-      fontSize: 20,
       alignItems: 'center'
     },
+    name: {
+        fontSize: 18,
+    }
   });
   
 

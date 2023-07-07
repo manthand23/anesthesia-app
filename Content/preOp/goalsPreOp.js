@@ -1,11 +1,10 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import { ScrollView, View, Text, StyleSheet } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { ScrollView, View, Text, StyleSheet, SafeAreaView } from 'react-native';
 
 const goalsPreOp = () => {
     return (
-        <SafeAreaView edges={['bottom']}>
+        <SafeAreaView edges={['top', 'bottom', 'left', 'right']}>
             <ScrollView>
                 {/* Illustrator */}
                 <View>
