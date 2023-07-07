@@ -4,13 +4,15 @@ import Heading from "./Components/heading";
 import Bullets from "./Components/bullets";
 import Table from "./Components/table"
 import Photo from "./Components/photo";
+import Quiz from "./Components/quiz";
 
 const Components = {
     title: Title,
     heading: Heading,
     bullets: Bullets,
     table: Table,
-    photo: Photo
+    photo: Photo,
+    quiz: Quiz,
   };
   
 export default (block) => {
