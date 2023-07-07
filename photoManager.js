@@ -1,7 +1,7 @@
 export default function photoManager(num) {
     
     if (num == 1) { return (require("./Photos/1.png")) }
-    // if (num == 2) { return (require("./Photos/2.png")) }
+    if (num == 2) { return (require("./Photos/2.png")) }
     // if (num == 3) { return (require("./Photos/3.png")) }
     // if (num == 4) { return (require("./Photos/4.png")) }
     // if (num == 5) { return (require("./Photos/5.png")) }
