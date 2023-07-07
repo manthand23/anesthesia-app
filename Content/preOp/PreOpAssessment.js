@@ -5,6 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from "@react-navigation/stack";
 import GoalsOfPreOpAssessment from './GoalsOfPreOpAssessment';
+import InvestigationOptimization from './Investigation_Optimatization';
 
 const Stack = createStackNavigator();
 
@@ -14,10 +15,10 @@ function Table({ navigation }) {
             <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('GoalsOfPreOpAssessment')}>
                 <Text style={styles.name}>Goals of Pre-Op Assessment</Text>
             </TouchableOpacity>
-            {/* <TouchableOpacity onPress={handlePress}>
-                <Text style={styles.button}>Investigation and Optimization</Text>
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('InvestigationOptimization')}>
+                <Text style={styles.name}>Investigation and Optimization</Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress={handlePress}>
+            {/* <TouchableOpacity onPress={handlePress}>
                 <Text style={styles.button}>Immediate Pre-Op Assessment</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={handlePress}>
@@ -45,6 +46,10 @@ const PreOpAssessment = () => {
                     <Stack.Screen
                         name='GoalsOfPreOpAssessment'
                         component={GoalsOfPreOpAssessment}
+                    />
+                    <Stack.Screen
+                        name='InvestigationOptimization'
+                        component={InvestigationOptimization}
                     />
                 </Stack.Navigator>
             </NavigationContainer>
