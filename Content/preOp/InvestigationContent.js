@@ -1,6 +1,6 @@
 export const investigation = {
     body: [
-        
+
 
     ]
 
