@@ -36,7 +36,7 @@ function Table({ navigation }) {
 
 const PreOpAssessment = () => {
     return (
-        <SafeAreaView edges={['bottom']} style={{ flex: 1 }}>
+        <SafeAreaView style={{ flex: 1 }}>
             <NavigationContainer independent={true}>
                 <Stack.Navigator screenOptions={{ headerShown: false }}>
                     <Stack.Screen
@@ -62,9 +62,11 @@ const styles = StyleSheet.create({
       borderWidth: 1,
       borderRadius: 10,
       margin: 10,
-      fontSize: 20,
       alignItems: 'center'
     },
+    name: {
+        fontSize: 18,
+    }
   });
   
 

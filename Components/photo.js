@@ -1,18 +1,14 @@
 import React from "react";
-import { StyleSheet, View, Image } from 'react-native';
+import { Dimensions, StyleSheet, View } from 'react-native';
+import Image from "react-native-scalable-image";
 import photoManager from "../photoManager";
 
 export default props => (
   <View className="photo" style={styles.container}>
-    <Image source={ photoManager( props.block.src ) } style={styles.photo}/>
+    <Image source={photoManager(props.block.src)} width={Dimensions.get('window').width - 10} />
   </View>
 );
 
 const styles = StyleSheet.create({
   container: { margin: 5 },
-  photo: {
-    width: '100%',
-    height: '40%',
-    resizeMode: "contain"
-  }
 });

@@ -48,7 +48,7 @@ function Table({ navigation }) {
 
 const ToC = () => {
     return (
-        <SafeAreaView edges={['bottom']} style={{ flex: 1 }}>
+        <SafeAreaView style={{ flex: 1}}>
             <NavigationContainer independent={true}>
                 <Stack.Navigator screenOptions={{ headerShown: false }}>
                     <Stack.Screen

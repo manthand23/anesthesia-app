@@ -14,8 +14,8 @@ export default function App() {
   return (
     <NavigationContainer>
       <Drawer.Navigator initialRouteName="Home">
-        <Drawer.Screen name="Home" component={ HomeScreen } />
-        <Drawer.Screen name="Table of Contents" component={ ToC } />
+        <Drawer.Screen name="Home" component={ HomeScreen } options={{ headerTitle:'' }} />
+        <Drawer.Screen name="Table of Contents" component={ ToC } options={{ headerTitle:'' }} />
         <Drawer.Screen name="Calculators" component={ CalculatorsScreen } />
         <Drawer.Screen name="Contributors" component={ ContributorsScreen } />
       </Drawer.Navigator>
