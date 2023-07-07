@@ -1,7 +1,6 @@
 import 'react-native-gesture-handler';
 import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, TextInput, ScrollView } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { View, Text, StyleSheet, TextInput, ScrollView, SafeAreaView } from 'react-native';
 import { ButtonGroup } from '@rneui/themed'
 
 const MaxLocal = () => {
@@ -42,7 +41,7 @@ const MaxLocal = () => {
     );
 
     return (
-        <SafeAreaView edges={['bottom']} style={{ flex: 1 }}>
+        <SafeAreaView edges={['top', 'bottom', 'left', 'right']} style={{ flex: 1 }}>
             <ScrollView>
                 <View>
                     <Text style={styles.title}>Drug</Text>

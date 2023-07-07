@@ -1,7 +1,6 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import { Text, TouchableOpacity, StyleSheet } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { Text, TouchableOpacity, StyleSheet, SafeAreaView } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from "@react-navigation/stack";
@@ -48,7 +47,7 @@ function Table({ navigation }) {
 
 const ToC = () => {
     return (
-        <SafeAreaView style={{ flex: 1}}>
+        <SafeAreaView edges={['top', 'bottom', 'left', 'right']} style={{ flex: 1}}>
             <NavigationContainer independent={true}>
                 <Stack.Navigator screenOptions={{ headerShown: false }}>
                     <Stack.Screen
