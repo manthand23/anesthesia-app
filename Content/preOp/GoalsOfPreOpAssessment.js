@@ -1,17 +1,15 @@
 import 'react-native-gesture-handler';
+import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { TouchableOpacity, Text } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
 import { data } from './GoalsContent';
 import Components from "../../components";
 
-
 const GoalsOfPreOpAssessment = () => {
+    return (
         <SafeAreaView edges={['bottom']}>
-            <TouchableOpacity onPress={handlePress}>
-                {data.body.map(block => Components(block))}
-            </TouchableOpacity>
+            {data.body.map(block => Components(block))}
         </SafeAreaView>
+    );
 };
 
 export default GoalsOfPreOpAssessment;
