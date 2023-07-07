@@ -1,21 +1,21 @@
 import 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import {TouchableOpacity, Text, StyleSheet } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from "@react-navigation/stack";
+import GoalsOfPreOpAssessment from './GoalsOfPreOpAssessment';
 
-const PreOpAssessment = () => {
-    const navigation = useNavigation();
+const Stack = createStackNavigator();
 
-    const handlePress = () => {
-        navigation.navigate('GoalsOfPreOpAssessment');
-    };
-
+function Table({ navigation }) {
     return (
-        <SafeAreaView edges={['bottom']}>
-            <TouchableOpacity onPress={handlePress}>
-                <Text style={styles.button}>Goals of Pre-Op Assessment</Text>
+        <ScrollView>
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('GoalsOfPreOpAssessment')}>
+                <Text style={styles.name}>Goals of Pre-Op Assessment</Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress={handlePress}>
+            {/* <TouchableOpacity onPress={handlePress}>
                 <Text style={styles.button}>Investigation and Optimization</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={handlePress}>
@@ -29,7 +29,26 @@ const PreOpAssessment = () => {
             </TouchableOpacity>
             <TouchableOpacity onPress={handlePress}>
                 <Text style={styles.button}>Complications & emergencies</Text>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
+        </ScrollView>
+    );
+}
+
+const PreOpAssessment = () => {
+    return (
+        <SafeAreaView edges={['bottom']} style={{ flex: 1 }}>
+            <NavigationContainer independent={true}>
+                <Stack.Navigator screenOptions={{ headerShown: false }}>
+                    <Stack.Screen
+                        name='Table of Contents'
+                        component={Table}
+                    />
+                    <Stack.Screen
+                        name='GoalsOfPreOpAssessment'
+                        component={GoalsOfPreOpAssessment}
+                    />
+                </Stack.Navigator>
+            </NavigationContainer>
         </SafeAreaView>
     );
 };
