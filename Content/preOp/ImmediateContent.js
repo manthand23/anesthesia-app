@@ -33,33 +33,17 @@ export const data = {
         /* Quiz stuff for Immediate here */
 
 
-
-
-
-
-
-
-
         { component: "title", text: "Mallampati Classification" },
         { component: "para", bold: "Mallampati classification: what can be visualized?" },
         {
             component: "table", tableHead: ["1", "2", "3", "4"], tableData: [
-                ["Faucial pillars,soft palate, entire uvula"],
-                [, "Faucial pillars, soft palate partial uvula"],
-                [, , "Soft palate only",],
-                [, , , "Hard palate only"],
+                ["Faucial pillars,soft palate, entire uvula", "Faucial pillars, soft palate partial uvula", "Soft palate only", "Hard palate only"],
             ]
         },
 
         { component: "photo", src: 1 },
 
         /* Quiz stuff for Mallam here */
-
-
-
-
-
-
 
 
         { component: "title", text: "Obstructive Sleep Apnea (OSA)" },
@@ -87,8 +71,6 @@ export const data = {
         /* Quiz stuff */
 
 
-
-
         { component: "heading", text: "Severe Obesity" },
 
         { component: "para", bold: "Definition: ", text: "BMI ≥35" },
@@ -104,11 +86,6 @@ export const data = {
         /* Quiz stuff */
 
 
-
-
-
-
-
         { component: "heading", text: "Diabetes Mellitus" },
 
         { component: "para", bold: "Physiological changes: ", text: "Autonomic dysfunction (orthostatic HTN, hypothermia), HTN, CAD, PVD, CKD, ↓ gastric motility, stiff joint syndrome, hypoglycemia." },
@@ -122,19 +99,15 @@ export const data = {
         /* Quiz stuff */
 
 
-
-
-
-
         { component: "heading", text: "COPD" },
 
-        { bold: "Physiological changes: ", text: "Obstructive lung disease, ↑ compliance, ↑ mucus secretions, V/Q mismatch, alveolar hypoventilation, ↓ gas transfer, pulmonary HTN." },
+        { component: "para", bold: "Physiological changes: ", text: "Obstructive lung disease, ↑ compliance, ↑ mucus secretions, V/Q mismatch, alveolar hypoventilation, ↓ gas transfer, pulmonary HTN." },
 
-        { bold: "Complications: ", text: "Bronchospasm, laryngospasm, hemodynamic instability, baro/volutrauma, auto-PEEP, post-op complications (e.g. infections, respiratory failure)." },
+        { component: "para", bold: "Complications: ", text: "Bronchospasm, laryngospasm, hemodynamic instability, baro/volutrauma, auto-PEEP, post-op complications (e.g. infections, respiratory failure)." },
 
-        { bold: "Pre/intra-operative management: ", text: "Assess exercise tolerance and severity of disease, counsel on smoking cessation perioperatively, continue puffers until day of surgery, consider regional anesthesia, obtain baseline room air ABG pre-operatively, consider art line (serial ABGs for high-risk patients; comparison to baseline may help guide timing for extubation), positive pressure during preoxygenation." },
+        { component: "para", bold: "Pre/intra-operative management: ", text: "Assess exercise tolerance and severity of disease, counsel on smoking cessation perioperatively, continue puffers until day of surgery, consider regional anesthesia, obtain baseline room air ABG pre-operatively, consider art line (serial ABGs for high-risk patients; comparison to baseline may help guide timing for extubation), positive pressure during preoxygenation." },
 
-        { bold: "Post-operative management: ", text: "Respiratory support and close monitoring, suctioning and physiotherapy to avoid sputum plugging, high risk patients should be monitored with ABGs and compared to baseline." },
+        { component: "para", bold: "Post-operative management: ", text: "Respiratory support and close monitoring, suctioning and physiotherapy to avoid sputum plugging, high risk patients should be monitored with ABGs and compared to baseline." },
 
         /* Quiz stuff */
 

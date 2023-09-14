@@ -4,6 +4,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 
 import HomeScreen from './Screens/Home';
+//import SearchScreen from './Screens/Search';
 import CalculatorsScreen from './Screens/Calculators';
 import ContributorsScreen from './Screens/Contributors';
 import ToC from './Screens/ToC';
@@ -16,6 +17,7 @@ export default function App() {
       <Drawer.Navigator initialRouteName="Home">
         <Drawer.Screen name="Home" component={ HomeScreen } options={{ headerTitle:'' }} />
         <Drawer.Screen name="Table of Contents" component={ ToC } options={{ headerTitle:'' }} />
+        {/* <Drawer.Screen name="Search" component={ SearchScreen } /> */}
         <Drawer.Screen name="Calculators" component={ CalculatorsScreen } />
         <Drawer.Screen name="Contributors" component={ ContributorsScreen } />
       </Drawer.Navigator>

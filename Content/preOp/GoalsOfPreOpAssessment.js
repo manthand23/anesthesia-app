@@ -15,4 +15,6 @@ const GoalsOfPreOpAssessment = () => {
     );
 };
 
-export default GoalsOfPreOpAssessment;
+module.exports = GoalsOfPreOpAssessment;
+
+//export default GoalsOfPreOpAssessment;
