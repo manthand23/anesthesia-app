@@ -3,16 +3,32 @@ import { StyleSheet, View } from 'react-native';
 import { Table, Row, Rows } from 'react-native-table-component';
 
 export default props => (
-  <View className="bullets" >
-    <Table borderStyle={{ borderWidth: 2, borderColor: 'black' }}>
-      <Row data={props.block.tableHead} style={styles.head} textStyle={styles.text} />
-      <Rows data={props.block.tableData} />
+  <View className="bullets" style={styles.container}>
+    <Table borderStyle={{ borderWidth: 1, borderColor: 'black' }}>
+      <Row data={props.block.tableHead} style={styles.head} textStyle={styles.headText} />
+      <Rows data={props.block.tableData} textStyle={styles.text} />
     </Table>
   </View>
 );
 
 const styles = StyleSheet.create({
-  //container: { flex: 1, padding: 16, paddingTop: 30, backgroundColor: '#fff' },
-  head: { backgroundColor: 'lightgrey' },
-  text: { fontSize: 15, fontWeight: 'bold', textAlign: 'center'}
+  container: {
+    marginHorizontal: 10,
+  },
+  head: {
+    backgroundColor: '#2089dc',
+    
+  },
+  headText: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    color: 'white',
+    padding: 5,
+  },
+  text: {
+    fontSize: 15,
+    textAlign: 'left',
+    margin: 5,
+  }
 });

@@ -1,8 +1,20 @@
 import React from "react";
-import { View, Text } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
 export default props => (
     <View className="title">
-        <Text style={{ fontSize: 30, fontWeight: 'bold', margin: 10, textAlign: "center" }}>{props.block.text}</Text>
+        <Text style={styles.text}>{props.block.text}</Text>
     </View>
 );
+
+const styles = StyleSheet.create({
+    text: {
+        fontSize: 30,
+        fontWeight: 'bold',
+        marginHorizontal: 10,
+        marginTop: 20,
+        marginBottom: 10,
+        textAlign: "center",
+        //paddding: 15
+    }
+})

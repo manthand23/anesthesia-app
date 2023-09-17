@@ -8,7 +8,7 @@ import Components from "../../components";
 const GoalsOfPreOpAssessment = () => {
     return (
         <SafeAreaView edges={['top', 'bottom', 'left', 'right']}>
-            <ScrollView>
+            <ScrollView style={{ backgroundColor: 'white' }}>
                 {data.body.map(block => Components(block))}
             </ScrollView>
         </SafeAreaView>
