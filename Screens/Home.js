@@ -12,8 +12,8 @@ function InputScreen({ navigation }) {
   const [input, setInput] = React.useState('');
 
   return (
-    <SafeAreaView edges={['top', 'bottom', 'left', 'right']} style={{ flex: 1 }}>
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    <SafeAreaView edges={['top', 'bottom', 'left', 'right']} style={{ flex: 1, backgroundColor: 'white' }}>
+      <View style={styles.container}>
         <View>
           <Text style={styles.header}>Anesthesia:</Text>
           <Text style={styles.header}>A Clerkship Pocket Guide</Text>
@@ -45,6 +45,12 @@ const HomeScreen = () => {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'white',
+  },
   header: {
     textAlign: 'left',
     fontWeight: 'bold',

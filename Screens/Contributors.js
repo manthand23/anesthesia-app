@@ -4,8 +4,8 @@ import { ScrollView, View, Text, StyleSheet, SafeAreaView } from 'react-native';
 
 const ContributorsScreen = () => {
     return (
-        <SafeAreaView edges={['top', 'bottom', 'left', 'right']}>
-            <ScrollView>
+        <SafeAreaView edges={['top', 'bottom', 'left', 'right']} style={{ backgroundColor: 'white' }}>
+            <ScrollView style={{ backgroundColor: 'white' }}>
                 {/* Editor-in-Chief */}
                 <View>
                     <Text style={styles.title}>Editor-in-Chief</Text>

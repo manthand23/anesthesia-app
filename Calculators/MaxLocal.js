@@ -49,6 +49,7 @@ const MaxLocal = () => {
                         textStyle={styles.button}
                         buttons={['Bupivacaine', 'Lidocaine', 'Mepivacain', 'Ropivacaine']}
                         selectedIndex={drug}
+                        underlayColor="red"
                         onPress={(value) => {
                             setDrug(value);
                         }}

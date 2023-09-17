@@ -1,7 +1,7 @@
 import elasticlunr from "elasticlunr";
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import { Text, TouchableOpacity, StyleSheet, SafeAreaView } from 'react-native';
+import { Text, TouchableOpacity, StyleSheet, SafeAreaView, View } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from "@react-navigation/stack";
@@ -62,41 +62,49 @@ function test(question) {
 function Table({ navigation }) {
     if (empty == true) {
         return (
-            <ScrollView>
-                <Text style={styles.name}>Search term not found!</Text>
+            <ScrollView style={{ backgroundColor: 'white' }}>
+                <View style={styles.container}>
+                    <Text style={styles.name}>Search term not found!</Text>
+                </View>
             </ScrollView>
         );
     } else if (page.length == 1) {
         return (
-            <ScrollView>
-                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate(page[0].title)}>
-                    <Text style={styles.name}>{page[0].title}</Text>
-                </TouchableOpacity>
+            <ScrollView style={{ backgroundColor: 'white' }}>
+                <View style={styles.container}>
+                    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate(page[0].title)}>
+                        <Text style={styles.name}>{page[0].title}</Text>
+                    </TouchableOpacity>
+                </View>
             </ScrollView>
         );
     } else if (page.length == 2) {
         return (
-            <ScrollView>
-                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate(page[0].title)}>
-                    <Text style={styles.name}>{page[0].title}</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate(page[1].title)}>
-                    <Text style={styles.name}>{page[1].title}</Text>
-                </TouchableOpacity>
+            <ScrollView> style={{ backgroundColor: 'white' }}
+                <View style={styles.container}>
+                    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate(page[0].title)}>
+                        <Text style={styles.name}>{page[0].title}</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate(page[1].title)}>
+                        <Text style={styles.name}>{page[1].title}</Text>
+                    </TouchableOpacity>
+                </View>
             </ScrollView>
         );
     } else if (page.length == 3) {
         return (
-            <ScrollView>
-                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate(page[0].title)}>
-                    <Text style={styles.name}>{page[0].title}</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate(page[1].title)}>
-                    <Text style={styles.name}>{page[1].title}</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate(page[2].title)}>
-                    <Text style={styles.name}>{page[2].title}</Text>
-                </TouchableOpacity>
+            <ScrollView style={{ backgroundColor: 'white' }}>
+                <View style={styles.container}>
+                    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate(page[0].title)}>
+                        <Text style={styles.name}>{page[0].title}</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate(page[1].title)}>
+                        <Text style={styles.name}>{page[1].title}</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate(page[2].title)}>
+                        <Text style={styles.name}>{page[2].title}</Text>
+                    </TouchableOpacity>
+                </View>
             </ScrollView>
         );
     }
@@ -111,7 +119,7 @@ const UploadContent = ({ route }) => {
     test(abc);
     if (page.length == 0) {
         return (
-            <SafeAreaView edges={['top', 'bottom', 'left', 'right']} style={{ flex: 1 }}>
+            <SafeAreaView edges={['top', 'bottom', 'left', 'right']} style={{ flex: 1, backgroundColor: 'white' }}>
                 <NavigationContainer independent={true}>
                     <Stack.Navigator screenOptions={{ headerShown: false }}>
                         <   Stack.Screen
@@ -124,7 +132,7 @@ const UploadContent = ({ route }) => {
         );
     } else if (page.length == 1) {
         return (
-            <SafeAreaView edges={['top', 'bottom', 'left', 'right']} style={{ flex: 1 }}>
+            <SafeAreaView edges={['top', 'bottom', 'left', 'right']} style={{ flex: 1, backgroundColor: 'white'  }}>
                 <NavigationContainer independent={true}>
                     <Stack.Navigator screenOptions={{ headerShown: false }}>
                         <   Stack.Screen
@@ -141,7 +149,7 @@ const UploadContent = ({ route }) => {
         );
     } else if (page.length == 2) {
         return (
-            <SafeAreaView edges={['top', 'bottom', 'left', 'right']} style={{ flex: 1 }}>
+            <SafeAreaView edges={['top', 'bottom', 'left', 'right']} style={{ flex: 1, backgroundColor: 'white'  }}>
                 <NavigationContainer independent={true}>
                     <Stack.Navigator screenOptions={{ headerShown: false }}>
                         <   Stack.Screen
@@ -162,7 +170,7 @@ const UploadContent = ({ route }) => {
         );
     } else if (page.length == 3) {
         return (
-            <SafeAreaView edges={['top', 'bottom', 'left', 'right']} style={{ flex: 1 }}>
+            <SafeAreaView edges={['top', 'bottom', 'left', 'right']} style={{ flex: 1, backgroundColor: 'white'  }}>
                 <NavigationContainer independent={true}>
                     <Stack.Navigator screenOptions={{ headerShown: false }}>
                         <   Stack.Screen
@@ -189,6 +197,12 @@ const UploadContent = ({ route }) => {
 }
 
 const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: 'white',
+    },
     button: {
         // backgroundColor: '#ee2244',
         width: '90%',

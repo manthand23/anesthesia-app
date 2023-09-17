@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, StyleSheet, Button } from 'react-native';
+import { View, Text, StyleSheet, Button, Pressable } from 'react-native';
 
 const Quiz = (props) => {
     const [showValue, setShowValue] = useState(false);
@@ -20,7 +20,14 @@ const Quiz = (props) => {
             })}
 
             {/* Answer */}
-            <Button title="Show Answer" onPress={() => setShowValue(!showValue)} />
+            {/* <Button title="Show Answer" style={styles.showButton} onPress={() => setShowValue(!showValue)} />
+            {showValue ? 
+            <Text style={styles.answer}>Answer: {props.block.answer}</Text>
+            : null} */}
+
+            <Pressable style={styles.showButton} onPress={() => setShowValue(!showValue)}>
+                <Text style={styles.buttonText}>Show Answer</Text>
+            </Pressable>
             {showValue ? <Text style={styles.answer}>Answer: {props.block.answer}</Text> : null}
         </View>
     );
@@ -31,19 +38,46 @@ export default Quiz;
 const styles = StyleSheet.create({
     container: {
         margin: 5,
-        // backgroundColor: '#ff4d4d',
+        backgroundColor: '#2089dc',
+        borderRadius: 10,
+        margin: 10,
+        padding: 5,
     },
     question: {
         fontSize: 20,
         fontWeight: 'bold',
-        marginBottom: 5
+        marginBottom: 5,
+        textAlign: 'center',
+        color: 'white',
     },
     options: {
         fontSize: 20,
-        margin: 2
+        margin: 2,
+        color: 'white',
     },
+    showButton: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        // paddingVertical: 12,
+        // paddingHorizontal: 32,
+        width: '95%',
+        minHeight: 40,
+        //borderWidth: 1,
+        borderRadius: 10,
+        margin: 10,
+        padding: 5,
+        backgroundColor: 'white',
+    },
+    buttonText: {
+        fontSize: 20,
+        // lineHeight: 21,
+        // fontWeight: 'bold',
+        // letterSpacing: 0.25,
+        color: '#2089dc',
+      },
     answer: {
         fontSize: 20,
-        marginBottom: 5
+        marginBottom: 5,
+        color: 'white',
     },
 });
