@@ -16,4 +16,3 @@ export const data = {
         { component: "quiz", question: "Who's the GOAT?", options: ["Sunidhi", "Lata", "Taylor", "Neha"], answer: "Dhyey" },
     ]
 };
-
