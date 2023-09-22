@@ -25,7 +25,10 @@ const Quiz = (props) => {
             <Text style={styles.answer}>Answer: {props.block.answer}</Text>
             : null} */}
 
-            <Pressable style={styles.showButton} onPress={() => setShowValue(!showValue)}>
+            <Pressable style={({ pressed }) => [
+                { opacity: pressed ? 0.2 : 1, backgroundColor: 'white' },
+                styles.showButton,
+            ]} onPress={() => setShowValue(!showValue)}>
                 <Text style={styles.buttonText}>Show Answer</Text>
             </Pressable>
             {showValue ? <Text style={styles.answer}>Answer: {props.block.answer}</Text> : null}
@@ -66,7 +69,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         margin: 10,
         padding: 5,
-        backgroundColor: 'white',
+       //backgroundColor: 'white',
     },
     buttonText: {
         fontSize: 20,
@@ -74,7 +77,7 @@ const styles = StyleSheet.create({
         // fontWeight: 'bold',
         // letterSpacing: 0.25,
         color: '#2089dc',
-      },
+    },
     answer: {
         fontSize: 20,
         marginBottom: 5,

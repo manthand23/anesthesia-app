@@ -16,7 +16,7 @@ export default props => (
 const styles = StyleSheet.create({
   text: {
     fontSize: 20,
-    marginHorizontal: 10,
+    marginHorizontal: 15,
     marginVertical: 5,
   },
   continer: {

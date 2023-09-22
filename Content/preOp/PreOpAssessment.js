@@ -1,5 +1,5 @@
 import 'react-native-gesture-handler';
-import {TouchableOpacity, Text, StyleSheet, SafeAreaView } from 'react-native';
+import { TouchableOpacity, Text, StyleSheet, SafeAreaView, View } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
 import { NavigationContainer } from '@react-navigation/native';
@@ -12,16 +12,17 @@ const Stack = createStackNavigator();
 
 function Table({ navigation }) {
     return (
-        <ScrollView>
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('GoalsOfPreOpAssessment')}>
-                <Text style={styles.name}>Goals of Pre-Op Assessment</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('InvestigationOptimization')}>
-                <Text style={styles.name}>Investigation and Optimization</Text>
-            </TouchableOpacity>
-            {<TouchableOpacity style={styles.button} onPress={() => navigation.navigate('ImmediatePreOp')}>
-                <Text style={styles.name}>Immediate Pre-Op Assessment</Text>
-            </TouchableOpacity>
+        <ScrollView style={{ backgroundColor: 'white' }}>
+            <View style={styles.container}>
+                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('GoalsOfPreOpAssessment')}>
+                    <Text style={styles.name}>Goals of Pre-Op Assessment</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('InvestigationOptimization')}>
+                    <Text style={styles.name}>Investigation and Optimization</Text>
+                </TouchableOpacity>
+                {<TouchableOpacity style={styles.button} onPress={() => navigation.navigate('ImmediatePreOp')}>
+                    <Text style={styles.name}>Immediate Pre-Op Assessment</Text>
+                </TouchableOpacity>
             /*<TouchableOpacity onPress={handlePress}>
                 <Text style={styles.button}>Post-operative nausea/vomiting (PONV)</Text>
             </TouchableOpacity>
@@ -31,13 +32,14 @@ function Table({ navigation }) {
             <TouchableOpacity onPress={handlePress}>
                 <Text style={styles.button}>Complications & emergencies</Text>
             </TouchableOpacity> */}
+            </View>
         </ScrollView>
     );
 }
 
 const PreOpAssessment = () => {
     return (
-        <SafeAreaView edges={['top', 'bottom', 'left', 'right']} style={{ flex: 1 }}>
+        <SafeAreaView edges={['top', 'bottom', 'left', 'right']} style={{ flex: 1, backgroundColor: 'white' }}>
             <NavigationContainer independent={true}>
                 <Stack.Navigator screenOptions={{ headerShown: false }}>
                     <Stack.Screen
@@ -63,21 +65,27 @@ const PreOpAssessment = () => {
 };
 
 const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: 'white',
+    },
     button: {
-      //backgroundColor: '#eaeaea',
-      width: '90%',
-      height: 40,
-      padding: 5,
-      borderWidth: 1,
-      borderRadius: 10,
-      margin: 10,
-      alignItems: 'center'
+        //backgroundColor: '#eaeaea',
+        width: '90%',
+        height: 40,
+        padding: 5,
+        borderWidth: 1,
+        borderRadius: 10,
+        margin: 10,
+        alignItems: 'center'
     },
     name: {
         fontSize: 18,
     }
-  });
-  
+});
+
 
 export default PreOpAssessment;
 

@@ -7,7 +7,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from "@react-navigation/stack";
 
 const Stack = createStackNavigator();
-let page = [], loc = [], empty;
+let page = [], loc = [];
 
 function test(question) {
 
@@ -48,7 +48,6 @@ function test(question) {
     if (ansLen == 0) {
         // IDK HOW TO SOLVE THIS YET
         console.log("GG you're screwed");
-        empty = true;
     } else if (ansLen > 0) {
         console.log("wtf");
         for (var i = 0; i < ansLen; i++) {
@@ -60,11 +59,11 @@ function test(question) {
 };
 
 function Table({ navigation }) {
-    if (empty == true) {
+    if (page.length == 0) {
         return (
             <ScrollView style={{ backgroundColor: 'white' }}>
                 <View style={styles.container}>
-                    <Text style={styles.name}>Search term not found!</Text>
+                    <Text>Search term not found!</Text>
                 </View>
             </ScrollView>
         );
@@ -72,7 +71,7 @@ function Table({ navigation }) {
         return (
             <ScrollView style={{ backgroundColor: 'white' }}>
                 <View style={styles.container}>
-                    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate(page[0].title)}>
+                    <TouchableOpacity style={styles.button} onPress={() => {navigation.removeListener; navigation.navigate(page[0].title);}}>
                         <Text style={styles.name}>{page[0].title}</Text>
                     </TouchableOpacity>
                 </View>
@@ -80,12 +79,12 @@ function Table({ navigation }) {
         );
     } else if (page.length == 2) {
         return (
-            <ScrollView> style={{ backgroundColor: 'white' }}
+            <ScrollView style={{ backgroundColor: 'white' }}>
                 <View style={styles.container}>
-                    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate(page[0].title)}>
+                    <TouchableOpacity style={styles.button} onPress={() => {navigation.removeListener; navigation.navigate(page[0].title);}}>
                         <Text style={styles.name}>{page[0].title}</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate(page[1].title)}>
+                    <TouchableOpacity style={styles.button} onPress={() => {navigation.removeListener; navigation.navigate(page[1].title);}}>
                         <Text style={styles.name}>{page[1].title}</Text>
                     </TouchableOpacity>
                 </View>
@@ -95,13 +94,13 @@ function Table({ navigation }) {
         return (
             <ScrollView style={{ backgroundColor: 'white' }}>
                 <View style={styles.container}>
-                    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate(page[0].title)}>
+                    <TouchableOpacity style={styles.button} onPress={() => {navigation.removeListener; navigation.navigate(page[0].title);}}>
                         <Text style={styles.name}>{page[0].title}</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate(page[1].title)}>
+                    <TouchableOpacity style={styles.button} onPress={() => {navigation.removeListener; navigation.navigate(page[1].title);}}>
                         <Text style={styles.name}>{page[1].title}</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate(page[2].title)}>
+                    <TouchableOpacity style={styles.button} onPress={() => {navigation.removeListener; navigation.navigate(page[2].title);}}>
                         <Text style={styles.name}>{page[2].title}</Text>
                     </TouchableOpacity>
                 </View>
@@ -115,11 +114,10 @@ const UploadContent = ({ route }) => {
     console.log("Input text: " + abc)
 
     page = [], loc = [];
-    empty = false;
     test(abc);
     if (page.length == 0) {
         return (
-            <SafeAreaView edges={['top', 'bottom', 'left', 'right']} style={{ flex: 1, backgroundColor: 'white' }}>
+            <SafeAreaView edges={['top', 'bottom', 'left', 'right']} style={{ backgroundColor: 'white' }}>
                 <NavigationContainer independent={true}>
                     <Stack.Navigator screenOptions={{ headerShown: false }}>
                         <   Stack.Screen
