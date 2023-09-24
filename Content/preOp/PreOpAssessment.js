@@ -62,15 +62,15 @@ const PreOpAssessment = () => {
                         component={ImmediatePreOp}
                     />
                      <Stack.Screen
-                        name='Post-operative Nausea/Vomiting'
+                        name='PONV'
                         component={PONV}
                     />
                     <Stack.Screen
-                        name='PACU Handover'
+                        name='PACU'
                         component={PACU}
                     />
                      <Stack.Screen
-                        name='Complications and Emergencies'
+                        name='Complications'
                         component={Complications}
                     />
                     
