@@ -7,8 +7,7 @@ export const data = {
         { component: "line" },
         {
             component: "table", tableHead: ["Simplified Apfel score for PONV", "Other risk factors:"], tableData: [
-                ["Female \n- Hx of PONV or motion sickness \n- Non-smoker \n- Post-operative opioids"],
-                ["Younger age \n- Use of volatile anesthetics \n- Surgery >2h \n- Pregnancy \n- Abdomen, genital, ENT/opthalmic, neurosurgery"]
+                ["Female \n- Hx of PONV or motion sickness \n- Non-smoker \n- Post-operative opioids", "Younger age \n- Use of volatile anesthetics \n- Surgery >2h \n- Pregnancy \n- Abdomen, genital, ENT/opthalmic, neurosurgery"]
             ]
         },
         { component: "line" },
