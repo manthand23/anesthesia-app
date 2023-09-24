@@ -7,6 +7,9 @@ import { createStackNavigator } from "@react-navigation/stack";
 import GoalsOfPreOpAssessment from './GoalsOfPreOpAssessment';
 import InvestigationOptimization from './Investigation_Optimatization';
 import ImmediatePreOp from './Immediate';
+import PONV from './PONV';
+import PACU from './PACU';
+import Complications from './Complications';
 
 const Stack = createStackNavigator();
 
@@ -20,18 +23,18 @@ function Table({ navigation }) {
                 <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('InvestigationOptimization')}>
                     <Text style={styles.name}>Investigation and Optimization</Text>
                 </TouchableOpacity>
-                {<TouchableOpacity style={styles.button} onPress={() => navigation.navigate('ImmediatePreOp')}>
+                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('ImmediatePreOp')}>
                     <Text style={styles.name}>Immediate Pre-Op Assessment</Text>
                 </TouchableOpacity>
-            /*<TouchableOpacity onPress={handlePress}>
-                <Text style={styles.button}>Post-operative nausea/vomiting (PONV)</Text>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={handlePress}>
-                <Text style={styles.button}>PACU handover</Text>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={handlePress}>
-                <Text style={styles.button}>Complications & emergencies</Text>
-            </TouchableOpacity> */}
+                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('PONV')}>
+                    <Text style={styles.name}>Post-operative Nausea/Vomiting</Text>
+                </TouchableOpacity>   
+                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('PACU')}>
+                    <Text style={styles.name}>PACU Handover</Text>
+                </TouchableOpacity>  
+                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Complications')}>
+                    <Text style={styles.name}>Complications & Emergencies</Text>
+                </TouchableOpacity> 
             </View>
         </ScrollView>
     );
@@ -58,6 +61,19 @@ const PreOpAssessment = () => {
                         name='ImmediatePreOp'
                         component={ImmediatePreOp}
                     />
+                     <Stack.Screen
+                        name='Post-operative Nausea/Vomiting'
+                        component={PONV}
+                    />
+                    <Stack.Screen
+                        name='PACU Handover'
+                        component={PACU}
+                    />
+                     <Stack.Screen
+                        name='Complications and Emergencies'
+                        component={Complications}
+                    />
+                    
                 </Stack.Navigator>
             </NavigationContainer>
         </SafeAreaView>
