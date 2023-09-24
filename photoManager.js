@@ -2,13 +2,13 @@ export default function photoManager(num) {
     
     if (num == 1) { return (require("./Photos/1.png")) }
     if (num == 2) { return (require("./Photos/2.png")) }
-    // if (num == 3) { return (require("./Photos/3.png")) }
-    // if (num == 4) { return (require("./Photos/4.png")) }
-    // if (num == 5) { return (require("./Photos/5.png")) }
-    // if (num == 6) { return (require("./Photos/6.png")) }
-    // if (num == 7) { return (require("./Photos/7.png")) }
-    // if (num == 8) { return (require("./Photos/8.png")) }
-    // if (num == 9) { return (require("./Photos/9.png")) }
+    if (num == 3) { return (require("./Photos/3.png")) }
+    if (num == 4) { return (require("./Photos/4.png")) }
+    if (num == 5) { return (require("./Photos/5.png")) }
+    if (num == 6) { return (require("./Photos/6.png")) }
+    if (num == 7) { return (require("./Photos/7.png")) }
+    if (num == 8) { return (require("./Photos/8.png")) }
+    if (num == 9) { return (require("./Photos/9.png")) }
     // if (num == 10) { return (require("./Photos/10.png")) }
     // if (num == 11) { return (require("./Photos/11.png")) }
     // if (num == 12) { return (require("./Photos/12.png")) }

@@ -16,30 +16,27 @@ function Table({ navigation }) {
     return (
         <ScrollView style={{ backgroundColor: 'white' }}>
             <View style={styles.container}>
-                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('CAS Standard Monitoring Guidelines')}>
-                    <Text style={styles.name}>Goals of Pre-Op Assessment</Text>
+                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('CAS')}>
+                    <Text style={styles.name}>CAS Standard Monitoring Guidelines</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Basics of mechanical ventilation')}>
-                    <Text style={styles.name}>Investigation and Optimization</Text>
+                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Basics')}>
+                    <Text style={styles.name}>Basics of mechanical ventilation</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Complications and Emergencies')}>
-                    <Text style={styles.name}>Immediate Pre-Op Assessment</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('The Anesthetic Machine')}>
-                    <Text style={styles.name}>Post-operative Nausea/Vomiting</Text>
-                </TouchableOpacity>   
-                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Preparing the OR - SOAP-IM')}>
-                    <Text style={styles.name}>PACU Handover</Text>
-                </TouchableOpacity>  
                 <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Complications')}>
-                    <Text style={styles.name}>Complications & Emergencies</Text>
-                </TouchableOpacity> 
+                    <Text style={styles.name}>Complications and Emergencies</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Machine')}>
+                    <Text style={styles.name}>The Anesthetic Machine</Text>
+                </TouchableOpacity>   
+                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('SOAP')}>
+                    <Text style={styles.name}>Preparing the OR - SOAP-IM</Text>
+                </TouchableOpacity>
             </View>
         </ScrollView>
     );
 }
 
-const PreOpAssessment = () => {
+const Orientation = () => {
     return (
         <SafeAreaView edges={['top', 'bottom', 'left', 'right']} style={{ flex: 1, backgroundColor: 'white' }}>
             <NavigationContainer independent={true}>
@@ -67,12 +64,7 @@ const PreOpAssessment = () => {
                      <Stack.Screen
                         name='SOAP'
                         component={SOAP}
-                    />
-                    <Stack.Screen
-                        name='PACU'
-                        component={PACU}
-                        />
-                    
+                    />                    
                 </Stack.Navigator>
             </NavigationContainer>
         </SafeAreaView>
@@ -102,5 +94,5 @@ const styles = StyleSheet.create({
 });
 
 
-export default PreOpAssessment;
+export default Orientation;
 

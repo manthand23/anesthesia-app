@@ -5,6 +5,8 @@ import { ScrollView } from 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from "@react-navigation/stack";
 import PreOpAssessment from '../Content/preOp/PreOpAssessment';
+import Orientation from '../Content/orientation/Orientation';
+import Airway from '../Content/airway/Airway';
 
 const Stack = createStackNavigator();
 
@@ -15,11 +17,10 @@ function Table({ navigation }) {
                 <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('PreOpAssessment')}>
                     <Text style={styles.name}>Pre-Operation Assesment</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('PreOpAssessment')}>
-                    <Text style={styles.name}>Orientation to the monitors
-                    and anesthetic machine</Text>
+                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Orientation')}>
+                    <Text style={styles.name}>Orientation to the monitors and anesthetic machine</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('PreOpAssessment')}>
+                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Airway')}>
                     <Text style={styles.name}>Airway management, intubation, and emergencies</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('PreOpAssessment')}>
@@ -60,6 +61,14 @@ const ToC = () => {
                     <Stack.Screen
                         name='PreOpAssessment'
                         component={PreOpAssessment}
+                    />
+                    <Stack.Screen
+                        name='Orientation'
+                        component={Orientation}
+                    />
+                    <Stack.Screen
+                        name='Airway'
+                        component={Airway}
                     />
                 </Stack.Navigator>
             </NavigationContainer>

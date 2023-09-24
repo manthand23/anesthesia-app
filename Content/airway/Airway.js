@@ -48,7 +48,7 @@ function Table({ navigation }) {
     );
 }
 
-const PreOpAssessment = () => {
+const Airway = () => {
     return (
         <SafeAreaView edges={['top', 'bottom', 'left', 'right']} style={{ flex: 1, backgroundColor: 'white' }}>
             <NavigationContainer independent={true}>
@@ -119,5 +119,5 @@ const styles = StyleSheet.create({
 });
 
 
-export default PreOpAssessment;
+export default Airway;
 

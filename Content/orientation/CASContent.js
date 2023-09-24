@@ -4,7 +4,7 @@ export const data = {
         { component: "line" },
         {
             component: "table", tableData: [
-                ["Required continously \n Oxygenation \n 1. Pulse oximeter \n \n Ventilation \n 2. ET CO2 capnography \n 3. Agent-specific anesthetic gas monitor \n \n Circulation \n 4. ECG \n 5. NIBP (q3 - 5 m)", "Available for use without delay \n- Temperature probe \n- Peripheral nerve stimulator \n- Stethoscope \n \n Available without undue delay \n- Spirometer for tidal volume \n- Manometer for ETT cuff pressure"],
+                ["Required continously: \n Oxygenation \n 1. Pulse oximeter \n \n Ventilation: \n 2. ET CO2 capnography \n 3. Agent-specific anesthetic gas monitor \n \n Circulation: \n 4. ECG \n 5. NIBP (q3 - 5 m)", "Available for use without delay: \n- Temperature probe \n- Peripheral nerve stimulator \n- Stethoscope \n \n Available without undue delay: \n- Spirometer for tidal volume \n- Manometer for ETT cuff pressure"],
             ]
         },
         { component: "heading", text: "Pulse Oximetry" },
@@ -15,7 +15,7 @@ export const data = {
         { component: "line" },
         { component: "heading", text: "ECG" },
         { component: "bullets", text: ["Usually 3 or 5 electrodes; defaults to monitoring lead II", "3 electrode: “White on the right, smoke (black) over fire (red).”", "5 electrode: “Snow (white) over trees (green); chocolate (brown) close to the heart.”"], 
-            component: "bullets", text: ["White = R arm", "Black = L arm", "Red=L leg", "Green = R leg", "Brown = V5" ]},
+            component: "bullets", text: ["White = R arm", "Black = L arm", "Red = L leg", "Green = R leg", "Brown = V5" ]},
         { component: "photo", src: 3 },
         { component: "line" },
         { component: "heading", text: "Capnography" },
